@@ -1,3 +1,3 @@
 
 
-<h1>Footer</h1>
+<center><h4>Footer</h4></center>

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Category\CategoryController;
 use App\Http\Controllers\Admin\Category\BrandController;
+use App\Http\Controllers\Admin\Category\SubCategoryController;
+use App\Http\Controllers\Admin\Category\CouponController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +40,19 @@ Route::post('admin/brands/store', [BrandController::class, 'store'])->name('bran
 Route::get('admin/brands/store/{id}', [BrandController::class, 'delete'])->name('brands.delete');
 Route::get('admin/brands/edit/{id}', [BrandController::class, 'edit'])->name('brands.edit');
 Route::post('admin/brands/update/{id}', [BrandController::class, 'update'])->name('brands.update');
+
+// Brand
+Route::get('admin/subcategories/list', [SubCategoryController::class, 'index'])->name('subcategories.list');
+Route::get('admin/subcategories/add', [SubCategoryController::class, 'add'])->name('subcategories.add');
+Route::post('admin/subcategories/store', [SubCategoryController::class, 'store'])->name('subcategories.store');
+Route::get('admin/subcategories/delete/{id}', [SubCategoryController::class, 'delete'])->name('subcategories.delete');
+Route::get('admin/subcategories/edit/{id}', [SubCategoryController::class, 'edit'])->name('subcategories.edit');
+Route::post('admin/subcategories/update/{id}', [SubCategoryController::class, 'update'])->name('subcategories.update');
+
+// Coupons
+Route::get('admin/coupons/list', [CouponController::class, 'index'])->name('coupons.list');
+Route::get('admin/coupons/add', [CouponController::class, 'add'])->name('coupons.add');
+Route::post('admin/coupons/store', [CouponController::class, 'store'])->name('coupons.store');
+Route::get('admin/coupons/delete/{id}', [CouponController::class, 'delete'])->name('coupons.delete');
+Route::get('admin/coupons/edit/{id}', [CouponController::class, 'edit'])->name('coupons.edit');
+Route::post('admin/coupons/update/{id}', [CouponController::class, 'update'])->name('coupons.update');

@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Admin</a>
+    <a class="navbar-brand" href="{{ url('/')}}">Admin</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,6 +31,28 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{{ route('brands.list')}}">List Brand </a></li>
               <li><a class="dropdown-item" href="{{ route('brands.add')}}">Add Brand </a></li>
+
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sub Category
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{{ route('subcategories.list')}}">List SubCategory </a></li>
+              <li><a class="dropdown-item" href="{{ route('subcategories.add')}}">Add SubCategory </a></li>
+
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Coupon
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{{ route('coupons.list')}}">List Coupon </a></li>
+              <li><a class="dropdown-item" href="{{ route('coupons.add')}}">Add Coupon </a></li>
 
             </ul>
           </li>
