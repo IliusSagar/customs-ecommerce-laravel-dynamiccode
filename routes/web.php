@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\Category\CategoryController;
 use App\Http\Controllers\Admin\Category\BrandController;
 use App\Http\Controllers\Admin\Category\SubCategoryController;
 use App\Http\Controllers\Admin\Category\CouponController;
+use App\Http\Controllers\Admin\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,10 @@ use App\Http\Controllers\Admin\Category\CouponController;
 // });
 
 Route::get('/', function () {
+    return view('frontend.index');
+});
+
+Route::get('/admin', function () {
     return view('admin.index');
 });
 
@@ -56,3 +61,11 @@ Route::post('admin/coupons/store', [CouponController::class, 'store'])->name('co
 Route::get('admin/coupons/delete/{id}', [CouponController::class, 'delete'])->name('coupons.delete');
 Route::get('admin/coupons/edit/{id}', [CouponController::class, 'edit'])->name('coupons.edit');
 Route::post('admin/coupons/update/{id}', [CouponController::class, 'update'])->name('coupons.update');
+
+// Products
+Route::get('admin/products/list', [ProductController::class, 'index'])->name('products.list');
+Route::get('admin/products/add', [ProductController::class, 'add'])->name('products.add');
+Route::post('admin/products/store', [ProductController::class, 'store'])->name('products.store');
+
+// Route::get('get/subcategory/{category_id}', [ProductController::class, 'GetSubcat']);
+//  Route::get('get/subcategory/{category_id}', 'Admin\ProductController@GetSubcat');
